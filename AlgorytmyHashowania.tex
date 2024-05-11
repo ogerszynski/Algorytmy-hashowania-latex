@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\title{Algorytmy hashowania – mechanizmy i zastosowania}
+\author{Olgierd Gerszyński, indeks 73715}
+\date{30 kwietnia 2024}
+
+\begin{document}
+
+\maketitle
+
+\section*{Wstęp}
+Algorytmy hashowania pełnią kluczową rolę w ochronie danych w erze cyfrowej, przekształcając dowolne dane wejściowe w unikalny, stałodługościowy ciąg bitów zwanym skrótem, który jest praktycznie niemożliwy do odwrócenia. Te algorytmy zapewniają zarówno szybkość przetwarzania danych, jak i ich bezpieczeństwo, co czyni je niezastąpionymi narzędziami w systemach zabezpieczeń, bazach danych oraz w aplikacjach internetowych.
+
+\section*{Problem i zastosowanie algorytmów hashowania}
+Algorytmy hashowania rozwiązują kilka fundamentalnych problemów w dziedzinie bezpieczeństwa danych i szybkiego dostępu do informacji: bezpieczne przechowywanie haseł, weryfikacja integralności danych oraz optymalizacja wyszukiwania.
+
+\section*{Omówienie pięciu algorytmów hashowania}
+\subsection*{MD5}
+\subsection*{SHA-1}
+\subsection*{SHA-256}
+\subsection*{B-Crypt}
+\subsection*{SHA-3}
+
+\section*{Przykładowe implementacje}
+Przykład implementacji algorytmu SHA-256 w języku Python:
+\begin{verbatim}
+import hashlib
+
+def hash_input(input_string):
+    return hashlib.sha256(input_string.encode()).hexdigest()
+
+example_string = "Testowy string"
+hashed_string = hash_input(example_string)
+print("SHA-256:", hashed_string)
+\end{verbatim}
+
+\section*{Kalkulacja złożoności obliczeniowej}
+Algorytmy hashowania są zaprojektowane tak, aby były szybkie w generowaniu skrótu, ale jednocześnie wolne i kosztowne obliczeniowo w przypadku prób odwrócenia.
+
+\section*{Wnioski}
+Algorytmy hashowania stanowią fundament bezpieczeństwa cyfrowego, umożliwiając ochronę danych przed nieautoryzowanym dostępem oraz ich szybką weryfikację.
+
+\section*{Referencje}
+\begin{itemize}
+    \item \href{https://sii.pl/blog/metody-atakow-oraz-podstawowe-algorytmy-szyfrowania-w-cyberbezpieczenstwie/}{Metody ataków oraz podstawowe algorytmy szyfrowania w cyberbezpieczeństwie}
+    \item \href{https://pl.wikipedia.org/wiki/Funkcja_skr%C3%B3tu}{Funkcja skrótu – Wikipedia}
+    \item \href{https://academy.binance.com/pl/articles/what-is-hashing}{What is Hashing? – Binance Academy}
+    \item \href{https://klinikadanych.pl/artykuly/rodzaje-algorytmow-szyfrujacych-oraz-ich-implementacje-programowe}{Rodzaje algorytmów szyfrujących oraz ich implementacje programowe}
+    \item \href{https://ssamolej.kia.prz.edu.pl/dydaktyka/KiBD/03_KiBD_szyfry_blokowe.pdf}{Szyfry blokowe - PDF}
+    \item \href{https://informatyka.2ap.pl/ftp/3d/algorytmy/podr%C4%99cznik_algorytmy.pdf}{Podręcznik algorytmy - PDF}
+\end{itemize}
+
+\end{document}
